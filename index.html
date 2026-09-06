@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PokeExplorer</title>
+
+    <link rel="stylesheet" href="index.css">
+      
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+
+        <div class="navbar-logo">
+            <img src="public/logo.png" alt="Logo de Pokémon">
+        </div>
+
+    </nav>
+
+
+    <!-- hero -->
+    <header id="inicio" class="hero">
+
+        <div class="hero-contenido">
+
+            <h1>Bienvenido a PokeExplorer</h1>
+
+            <p>
+                Explora el mundo Pokémon, encuentra tus Pokémon favoritos
+                y conoce sus principales características.
+            </p>
+
+            <a href="#buscar" class="btn-explorar">
+                Explorar Pokémon
+            </a>
+
+        </div>
+
+
+        <div class="hero-imagen">
+
+            <img
+                src="public/hero.jpeg"
+                alt="Personajes del mundo Pokémon"
+            >
+
+        </div>
+
+    </header>
+
+
+   
+    <main>
+
+
+        <!-- buscador-->
+        <section id="buscar" class="seccion-busqueda">
+
+            <div class="titulo-seccion">
+
+                <h2>Busca tu Pokémon favorito</h2>
+
+                <p>Ingresa el nombre o número del Pokémo que deseas encontrar.</p>
+
+            </div>
+            <div class="buscador">
+                <input
+                    type="text"
+                    id="NombrePokemon"
+                    placeholder="nombre de pokemon que deseas buscar"
+                >
+
+                <button onclick="Buscarpokemon()">
+                    Buscar
+                </button>
+            </div>
+
+
+            <!-- resultado -->
+            <div id="demo" class="resultado-busqueda">
+                <p>Esperando para mostrarte tu Pokémon...</p>
+            </div>
+
+        </section>
+
+
+        
+        <section id="filtros" class="seccion-filtros">
+            <div class="titulo-seccion">
+                <h2>Explora por tipo</h2>
+
+                <p>Selecciona un tipo para descubrir diferentes Pokémon</p>
+
+            </div>
+            <div class="botones-filtros">
+
+                <button onclick="FiltrarPokemon('all')">
+                    Todos
+                </button>
+
+                <button onclick="FiltrarPokemon('fire')">
+                    Fuego
+                </button>
+
+                <button onclick="FiltrarPokemon('water')">
+                    Agua
+                </button>
+
+                <button onclick="FiltrarPokemon('grass')">
+                    Planta
+                </button>
+
+                <button onclick="FiltrarPokemon('electric')">
+                    Eléctrico
+                </button>
+
+                <button onclick="FiltrarPokemon('poison')">
+                    Veneno
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!--listado-->
+        <section id="explorar" class="seccion-pokemon">
+
+            <div class="titulo-seccion">
+
+                <h2>Pokémon encontrados</h2>
+
+                <p>
+                    Conoce sus tipos, altura y peso.
+                </p>
+
+            </div>
+
+
+            <!-- js crea las carpetas -->
+            <div
+                class="grid"
+                id="PokemonGrid"
+            >
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    
+    <script src="index.js"></script>
+
+</body>
+
+</html>
